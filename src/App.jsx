@@ -18,7 +18,7 @@ function App() {
 
 
   return (
-    <>
+    <div className='app'>
       <div className="table">
         <nav>
         <Link to="/">
@@ -42,12 +42,12 @@ function App() {
           <Route path='/User' element={<User></User>}></Route>
           <Route path='/User/:id' element={<User></User>}></Route>
           <Route path='/Comments' element={<Comments></Comments>}></Route>
-          <Route path='/Comments:id' element={<Comments></Comments>}></Route>
+          <Route path='/Comments/:id' element={<Comments></Comments>}></Route>
           <Route path='/Posts' element={<Posts></Posts>}></Route>
-          <Route path='/Posts:id' element={<Posts></Posts>}></Route>
+          <Route path='/Posts/:id' element={<Posts></Posts>}></Route>
         </Routes>
       </div>
-    </>
+    </div>
   )
 }
 

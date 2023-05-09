@@ -12,21 +12,20 @@ export default function Users(){
             const {data: users} = await axios('https://jsonplaceholder.typicode.com/users')
             setIsLoading(false)
             setUsers(users)
-            console.log(users)
         }
         getUsers()
 
     },[])
  
     return (
-        <>
+        <div className="user-list">
         {isLoading && <h3>loading..</h3>}
            <table>
-                <thead>
+                <thead className="header">
                     <tr>
-                    <th>username</th>
-                    <th>posts</th>
-                    <th>comments</th>
+                        <th>username</th>
+                        <th>posts</th>
+                        <th>comments</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,47 +40,24 @@ export default function Users(){
                                 </Link> 
                             </td>
                            
-                            <td>see</td>
-                            <td>30</td>
+                            <td>
+                                <Link to={`/Posts/id:${users.id}`}>
+                                  see posts
+                                </Link>
+                            </td>
+                            <td>
+                                <Link to={`/Comments/id:${users.id}`}>
+                                see comments
+                                </Link>
+                            </td>    
                         </tr>
                     
-               
-                    //    <Link key={key} to={`/user/id:${users.id}`}>
-                    //         <button>{users.id} - {users.name}</button>
-                    //     </Link>
-
+            
                     )
                     )}
-                   
-                   
-                   
-                   
-                    {/* <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>30</td>
-                    </tr>
-                    <tr>
-                    <td>Jane</td>
-                    <td>Smith</td>
-                    <td>25</td>
-                    </tr>
-                    <tr>
-                    <td>Bob</td>
-                    <td>Johnson</td>
-                    <td>45</td>
-                    </tr> */}
+                
                 </tbody>
             </table>
-            
-           
-
-            <ul>
-                
-
-                
-            </ul>
-            
-        </>
+        </div>
     )
 }
