@@ -61,6 +61,10 @@ table {
 th, td {
   text-align: left;
   padding: 8px;
+  max-width: 400px;
+  border-bottom :1px solid;
+  border-color: #e0aaff;
+  flex-wrap: wrap;
 }
 
 th {
@@ -87,6 +91,13 @@ a {
   font-weight: bold;
 }
 
+.posts-container {
+  height: 700px;
+}
+
+.title-zone {
+  display: flex;
+}
 
 
 /**/
