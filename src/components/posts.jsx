@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 export default function Posts() {
     const [user, setUser] = useState('')
@@ -50,6 +50,11 @@ export default function Posts() {
                   
                 </tbody>
                 </table>
+                <div className="all-posts-button-container">
+                    <Link to='al'>
+                        <button className="all-posts-button" >see all posts</button>
+                    </Link>
+                </div>
             </div>
         </>
     )
