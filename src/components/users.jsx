@@ -25,7 +25,6 @@ export default function Users(){
                     <tr>
                         <th>username</th>
                         <th>posts</th>
-                        <th>comments</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,11 +44,7 @@ export default function Users(){
                                   see posts
                                 </Link>
                             </td>
-                            <td>
-                                <Link to={`/Comments/id:${users.id}`}>
-                                see comments
-                                </Link>
-                            </td>    
+                          
                         </tr>
                     
             
