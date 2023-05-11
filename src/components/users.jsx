@@ -53,6 +53,11 @@ export default function Users(){
                 
                 </tbody>
             </table>
+            <div className="all-posts-button-container">
+                    <Link to='/Posts/All'>
+                        <button className="all-posts-button" >see all posts</button>
+                    </Link>
+                </div>
         </div>
     )
 }

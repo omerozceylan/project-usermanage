@@ -24,7 +24,11 @@ export default function Posts() {
                 getUserInfo()
                 getPostsById()
             }else{
-                return
+                async function getAllPosts() {
+                    const {data: allPosts} = await axios('https://jsonplaceholder.typicode.com/posts')
+                    setPosts(allPosts)
+                }
+                getAllPosts()
             }
             
             
@@ -59,11 +63,7 @@ export default function Posts() {
                   
                 </tbody>
                 </table>
-                <div className="all-posts-button-container">
-                    <Link to='/Posts/All'>
-                        <button className="all-posts-button" >see all posts</button>
-                    </Link>
-                </div>
+                
             </div>
         </>
     )
