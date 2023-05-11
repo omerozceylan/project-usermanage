@@ -33,7 +33,7 @@ function App() {
           <Route path='/Comments/:id' element={<Comments></Comments>}></Route>
           <Route path='/Posts' element={<Posts></Posts>}></Route>
           <Route path='/Posts/:id' element={<Posts></Posts>}></Route>
-          <Route path='/Posts/:all' element={<Posts></Posts>}></Route>
+          <Route path='/Posts/All' element={<Posts></Posts>}></Route>
         </Routes>
       </div>
     </div>
